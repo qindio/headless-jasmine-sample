@@ -19,4 +19,4 @@ phantomjs spec/run-jasmine.js spec/SpecRunner.html
 
 ## Hyping it
 
-Check the blogpost at http://lorenzoplanas.com/blog/20140302-headless-setup-for-jasmine-20
+Check the blogpost at http://lorenzoplanas.com/blog/20140302-headless-javascript-testing-with-jasmine-20
