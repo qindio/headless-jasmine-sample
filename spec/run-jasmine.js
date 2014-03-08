@@ -19,7 +19,7 @@ page.onConsoleMessage = function (msg) {
     system.stdout.write(msg);
     var match = doneRegEx.exec(msg);
     if (match) {
-        rc = match[1];
+        rc = match[1]==="0" ? 0 : 1;
         return;
     }
     match = noReallyDoneRegEx.exec(msg);
