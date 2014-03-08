@@ -35,6 +35,5 @@ page.open(system.args[1], function(status){
         console.log("Couldn't load the page");
     }
     system.stdout.writeLine("");
-    phantom.exit();
 });
 
