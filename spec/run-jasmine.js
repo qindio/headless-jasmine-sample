@@ -25,7 +25,9 @@ page.onConsoleMessage = function (msg) {
     match = noReallyDoneRegEx.exec(msg);
     if (match) {
         system.stdout.writeLine("");
-        phantom.exit(rc);
+        // close browser and phantomjs
+        if (page) page.close();
+        setTimeout(function(){ phantom.exit(rc); }, 0);        
     }
 };
 
@@ -33,6 +35,9 @@ system.stdout.writeLine("");
 page.open(system.args[1], function(status){
     if (status !== "success") {
         console.log("Couldn't load the page");
+        // close browser and phantomjs
+        if (page) page.close();
+        setTimeout(function(){ phantom.exit(1); }, 0);
     }
     system.stdout.writeLine("");
 });
